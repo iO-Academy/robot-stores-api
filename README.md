@@ -123,3 +123,70 @@ Use the [json file](products.json) in this repo to set up the database.
 
     * **Code:** 500 SERVER ERROR <br />
       **Content:** `{"message": "Unexpected error", "data": []}`
+
+### Add new product - STRETCH GOAL
+
+* **URL**
+
+  /products
+
+* **Method:**
+
+  `POST`
+
+* **URL Params**
+
+  **Required:**
+
+  There are no required URL params
+
+  **Optional:**
+
+  There are no optional URL params
+
+* **Body Data**
+
+  Must be sent as JSON with the correct headers
+
+  **Required:**
+
+    ```json
+    {
+      "title": "String",
+      "price": Number,
+      "image": "URL string",
+      "category": "String",
+      "character": "String",
+      "description": "String"
+    }
+    ```
+
+  **Optional:**
+
+    ```json
+    {
+      "image2": "URL string"|null,
+      "image3": "URL string"|null
+    }
+    ```
+
+  **Example:**
+
+  `/products`
+
+* **Success Response:**
+
+    * **Code:** 201 CREATED <br />
+      **Content:** <br />
+
+  ```json
+  {"message": "Successfully created product."}
+  ```
+
+* **Error Response:**
+
+    * **Code:** 400 BAD REQUEST <br />
+      **Content:** `{"message": "Invalid product data", "data": []}`
+
+    * **Code:** 500 SERVER ERROR <br />
+      **Content:** `{"message": "Unexpected error", "data": []}`
