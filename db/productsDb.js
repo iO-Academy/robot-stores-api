@@ -1,13 +1,5 @@
 const dbService = require('../services/dbService');
 
-// let dbConnection = null;
-//
-// dbService.connectToDB()
-//   .then(db => dbConnection = db)
-//   .catch(error => {
-//     throw new Error('Error connecting to DB.\n' + error.message)
-//   });
-
 let productsCollection = null;
 
 dbService.connectToDB()
@@ -17,7 +9,6 @@ dbService.connectToDB()
   .catch(error => {
     throw new Error('Error connecting to DB.\n' + error.message)
   });
-
 
 /**
  * Fetch all products.
@@ -30,16 +21,13 @@ const getProducts = async (categories = [], characters = []) => {
   console.log('db.productsDb.getProducts()');
 
   try {
-    // const productsCollection = await dbConnection.collection('products');
-
     let query = {};
     if (categories.length > 0) {
-      query.category = {$in: categories};
+      query.category = { $in: categories };
     }
     if (characters.length > 0) {
-      query.character = {$in: characters};
+      query.character = { $in: characters };
     }
-    console.log(query);
 
     return await productsCollection.find(query).toArray();
   } catch (e) {
@@ -47,6 +35,29 @@ const getProducts = async (categories = [], characters = []) => {
   }
 }
 
+/**
+ * Add new product.
+ *
+ * @param newProduct The product to add.
+ * @returns {Promise<_id>}
+ */
+const postProducts = async (newProduct) => {
+  console.log('db.productsDb.postProducts()');
+
+  try {
+    const result = await productsCollection.insertOne(newProduct);
+    return result.insertedId;
+  } catch (e) {
+    throw new Error('Unexpected error');
+  }
+}
+
+/**
+ * Fetch a single product.
+ *
+ * @param id The id of the product to fetch.
+ * @returns {Promise<{}>} The product.
+ */
 const getProduct = async (id) => {
   console.log('db.productsDb.getProduct()');
 
@@ -83,10 +94,49 @@ const getAllIds = async () => {
   }
 }
 
+const getMaxId = async () => {
+  try {
+    const productWithMaxIdArray = await productsCollection
+      .find()
+      .sort({ id: -1 }) // descending
+      .limit(1)
+      .toArray();
+    return productWithMaxIdArray[0].id;
+  } catch (e) {
+    throw new Error('Unexpected error');
+  }
+}
+
+const getIdForCategory = async (category) => {
+  const query = { category: category };
+  const options = {
+    // Include only the `_id` and `category_id` fields
+    projection: { category_id: 1 }
+  };
+  const categoryIdDoc = await productsCollection.findOne(query, options);
+
+  return categoryIdDoc.category_id;
+}
+
+const getIdForCharacter = async (character) => {
+  const query = { character: character };
+  const options = {
+    // Include only the `_id` and `character_id` fields
+    projection: { character_id: 1 }
+  };
+  const characterIdDoc = await productsCollection.findOne(query, options);
+
+  return characterIdDoc.character_id;
+}
+
 module.exports = {
   getProducts,
+  postProducts,
   getProduct,
   getAllCategories,
   getAllCharacters,
-  getAllIds
+  getAllIds,
+  getMaxId,
+  getIdForCategory,
+  getIdForCharacter
 }

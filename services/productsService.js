@@ -16,6 +16,37 @@ const getProducts = async (categories, characters) => {
   return await productsDb.getProducts(categories, characters);
 }
 
+const postProducts = async (newProduct) => {
+  console.log('services.productsService.postProducts()');
+
+  if (!await validNewProduct(newProduct)) {
+    throw new errors.ValidationError('Invalid product data');
+  }
+
+  if (!newProduct.id) {
+    const maxId = await productsDb.getMaxId();
+    newProduct.id = maxId + 1;
+  }
+
+  if (!newProduct.category_id) {
+    newProduct.category_id = await productsDb.getIdForCategory(newProduct.category);
+  }
+
+  if (!newProduct.character_id) {
+    newProduct.character_id = await productsDb.getIdForCharacter(newProduct.character);
+  }
+
+  if (!newProduct.image2) {
+    newProduct.image2 = "NULL";
+  }
+
+  if (!newProduct.image3) {
+    newProduct.image3 = "NULL";
+  }
+
+  return await productsDb.postProducts(newProduct);
+}
+
 const getProduct = async (id) => {
   console.log('services.productsService.getProduct()');
 
@@ -80,8 +111,19 @@ const validId = async (id) => {
   return true;
 }
 
+const validNewProduct = async (newProduct) => {
+  console.log('services.productsService.validNewProduct');
+
+  if (newProduct.id && await validId(newProduct.id)) {
+    return false;
+  }
+
+  return true;
+}
+
 module.exports = {
   getProducts,
+  postProducts,
   getProduct,
   validCategories,
   validCharacters,

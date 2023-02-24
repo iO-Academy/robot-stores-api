@@ -7,11 +7,6 @@ const getProducts = async (req, res) => {
 
   const categories = stringValuesToArray(req.query.categories);
   const characters = stringValuesToArray(req.query.characters);
-  // console.log('Query string:');
-  // console.log('categories');
-  // console.table(categories);
-  // console.log('characters');
-  // console.table(characters);
 
   let status = 200;
   const obj = {
@@ -25,6 +20,32 @@ const getProducts = async (req, res) => {
     obj.data = products;
   } catch (error) {
     obj.message = error.message;
+    if (error instanceof errors.ValidationError) {
+      status = 400;
+    } else {
+      status = 500;
+    }
+  }
+
+  res.status(status).json(obj);
+}
+
+const postProducts = async (req, res) => {
+  console.log('controller.productsControllers.postProduct()');
+
+  const newProduct = req.body;
+
+  let status = 201;
+  const obj = {
+    message: ''
+  };
+
+  try {
+    const product = await productsService.postProducts(newProduct);
+    obj.message = "Successfully created product.";
+  } catch (error) {
+    obj.message = error.message;
+    obj.data = [];
     if (error instanceof errors.ValidationError) {
       status = 400;
     } else {
@@ -64,5 +85,6 @@ const getProduct = async (req, res) => {
 
 module.exports = {
   getProducts,
+  postProducts,
   getProduct
 }
