@@ -165,8 +165,8 @@ Use the [json file](products.json) in this repo to set up the database.
 
     ```json
     {
-      "image2": "URL string"|null,
-      "image3": "URL string"|null
+      "image2": "URL string"|"NULL",
+      "image3": "URL string"|"NULL"
     }
     ```
 
@@ -187,6 +187,98 @@ Use the [json file](products.json) in this repo to set up the database.
 
     * **Code:** 400 BAD REQUEST <br />
       **Content:** `{"message": "Invalid product data", "data": []}`
+
+    * **Code:** 500 SERVER ERROR <br />
+      **Content:** `{"message": "Unexpected error", "data": []}`
+
+### Return all categories
+
+* **URL**
+
+  /categories
+
+* **Method:**
+
+  `GET`
+
+* **URL Params**
+
+  **Required:**
+
+  There are no required URL params
+
+  **Optional:**
+
+  There are no optional URL params
+
+  **Example:**
+
+  `/categories`
+
+* **Success Response:**
+
+    * **Code:** 200 <br />
+      **Content:** <br />
+
+  ```json
+  {
+  "message": "Successfully found categories.",
+  "data": [
+      "Aprons",
+      "Baseball hats",
+      "Mugs",
+      "T-shirts"
+  ]
+  }
+  ```
+
+* **Error Response:**
+
+    * **Code:** 500 SERVER ERROR <br />
+      **Content:** `{"message": "Unexpected error", "data": []}`
+
+### Return all characters
+
+* **URL**
+
+  /characters
+
+* **Method:**
+
+  `GET`
+
+* **URL Params**
+
+  **Required:**
+
+  There are no required URL params
+
+  **Optional:**
+
+  There are no optional URL params
+
+  **Example:**
+
+  `/characters`
+
+* **Success Response:**
+
+    * **Code:** 200 <br />
+      **Content:** <br />
+
+  ```json
+  {
+  "message": "Successfully found characters.",
+  "data": [
+      "Fred",
+      "Dolores",
+      "Bubbles",
+      "Rex"
+  ]
+  }
+  ```
+
+* **Error Response:**
 
     * **Code:** 500 SERVER ERROR <br />
       **Content:** `{"message": "Unexpected error", "data": []}`
