@@ -3,8 +3,6 @@ const errors = require('../utils/errors');
 const { stringValuesToArray } = require('../utils/miscUtils');
 
 const getProducts = async (req, res) => {
-  console.log('controllers.productsController.getProducts()');
-
   const categories = stringValuesToArray(req.query.categories);
   const characters = stringValuesToArray(req.query.characters);
 
@@ -31,8 +29,6 @@ const getProducts = async (req, res) => {
 }
 
 const postProducts = async (req, res) => {
-  console.log('controller.productsControllers.postProduct()');
-
   const newProduct = req.body;
 
   let status = 201;
@@ -57,8 +53,6 @@ const postProducts = async (req, res) => {
 }
 
 const getProduct = async (req, res) => {
-  console.log('controller.productsControllers.getProduct()');
-
   const id = req.params.id;
 
   let status = 200;
@@ -84,8 +78,6 @@ const getProduct = async (req, res) => {
 }
 
 const getCategories = async (req, res) => {
-  console.log('controller.productsControllers.getCategories()');
-
   let status = 200;
   const obj = {
     message: '',
@@ -105,8 +97,6 @@ const getCategories = async (req, res) => {
 }
 
 const getCharacters = async (req, res) => {
-  console.log('controller.productsControllers.getCharacters()');
-
   let status = 200;
   const obj = {
     message: '',

@@ -18,8 +18,6 @@ dbService.connectToDB()
  * @returns {Promise<Array>} An array of products.
  */
 const getProducts = async (categories = [], characters = []) => {
-  console.log('db.productsDb.getProducts()');
-
   try {
     let query = {};
     if (categories.length > 0) {
@@ -42,8 +40,6 @@ const getProducts = async (categories = [], characters = []) => {
  * @returns {Promise<_id>}
  */
 const postProducts = async (newProduct) => {
-  console.log('db.productsDb.postProducts()');
-
   try {
     const result = await productsCollection.insertOne(newProduct);
     return result.insertedId;
@@ -59,8 +55,6 @@ const postProducts = async (newProduct) => {
  * @returns {Promise<{}>} The product.
  */
 const getProduct = async (id) => {
-  console.log('db.productsDb.getProduct()');
-
   let query = { id: id };
 
   try {

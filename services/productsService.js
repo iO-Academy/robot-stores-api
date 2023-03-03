@@ -3,8 +3,6 @@ const arrayUtils = require('../utils/arrayUtils');
 const errors = require('../utils/errors');
 
 const getProducts = async (categories, characters) => {
-  console.log('services.productsService.getProducts()');
-
   if (categories && !await validCategories(categories)) {
     throw new errors.ValidationError('Unknown category');
   }
@@ -17,8 +15,6 @@ const getProducts = async (categories, characters) => {
 }
 
 const postProducts = async (newProduct) => {
-  console.log('services.productsService.postProducts()');
-
   if (!await validNewProduct(newProduct)) {
     throw new errors.ValidationError('Invalid product data');
   }
@@ -48,8 +44,6 @@ const postProducts = async (newProduct) => {
 }
 
 const getProduct = async (id) => {
-  console.log('services.productsService.getProduct()');
-
   if (id && !await validIdStr(id)) {
     throw new errors.ValidationError('Unknown product ID');
   }
@@ -58,8 +52,6 @@ const getProduct = async (id) => {
 }
 
 const getCategories = async () => {
-  console.log('services.productsService.getCategories()');
-
   return await productsDb.getAllCategories();
 }
 
@@ -70,8 +62,6 @@ const getCategories = async () => {
  * @returns {Promise<boolean>}
  */
 const validCategories = async (categories) => {
-  console.log('services.productsService.validCategories()');
-
   if (!Array.isArray(categories)) {
     return false;
   }
@@ -86,8 +76,6 @@ const validCategories = async (categories) => {
 }
 
 const getCharacters = async () => {
-  console.log('services.productsService.getCharacters()');
-
   return await productsDb.getAllCharacters();
 }
 
@@ -112,8 +100,6 @@ const validCharacters = async (characters) => {
 }
 
 const validIdStr = async (idStr) => {
-  console.log('services.productsService.validIdStr');
-
   const id = Number.parseInt(idStr);
 
   if (Number.isNaN(id)) {
@@ -124,8 +110,6 @@ const validIdStr = async (idStr) => {
 }
 
 const validId = async (id) => {
-  console.log('services.productsService.validId');
-
   let allIds = await productsDb.getAllIds();
 
   if (!allIds.includes(id)) {
@@ -136,8 +120,6 @@ const validId = async (id) => {
 }
 
 const validNewProduct = async (newProduct) => {
-  console.log('services.productsService.validNewProduct');
-
   if (newProduct.id && await validId(newProduct.id)) {
     return false;
   }

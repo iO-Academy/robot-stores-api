@@ -5,7 +5,7 @@ const client = new MongoClient(url);
 const dbName = 'robot_stores';
 
 const connectToDB = async () => {
-  console.log('services.dbService.connectToDB()');
+  console.log('Waiting to connect to DB.');
   await client.connect();
   console.log(`MongoDB client is connected.`);
   const db = client.db(dbName);
