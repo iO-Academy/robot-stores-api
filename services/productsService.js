@@ -57,6 +57,18 @@ const getProduct = async (id) => {
   return await productsDb.getProduct(Number.parseInt(id));
 }
 
+const getCategories = async () => {
+  console.log('services.productsService.getCategories()');
+
+  return await productsDb.getAllCategories();
+}
+
+/**
+ * Check that an array contains a valid set of categories.
+ *
+ * @param categories The array of categories.
+ * @returns {Promise<boolean>}
+ */
 const validCategories = async (categories) => {
   console.log('services.productsService.validCategories()');
 
@@ -64,7 +76,7 @@ const validCategories = async (categories) => {
     return false;
   }
 
-  const allCategories = await productsDb.getAllCategories();
+  const allCategories = await getCategories();
 
   if (!arrayUtils.isSubsetOf(categories, allCategories)) {
     return false;
@@ -73,12 +85,24 @@ const validCategories = async (categories) => {
   return true;
 }
 
+const getCharacters = async () => {
+  console.log('services.productsService.getCharacters()');
+
+  return await productsDb.getAllCharacters();
+}
+
+/**
+ * Check that an array contains a valid set of characters.
+ *
+ * @param characters The array of characters.
+ * @returns {Promise<boolean>}
+ */
 const validCharacters = async (characters) => {
   if (!Array.isArray(characters)) {
     return false;
   }
 
-  const allCharacters = await productsDb.getAllCharacters();
+  const allCharacters = await getCharacters();
 
   if (!arrayUtils.isSubsetOf(characters, allCharacters)) {
     return false;
@@ -125,6 +149,8 @@ module.exports = {
   getProducts,
   postProducts,
   getProduct,
+  getCategories,
+  getCharacters,
   validCategories,
   validCharacters,
   validIdStr,

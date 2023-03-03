@@ -83,8 +83,52 @@ const getProduct = async (req, res) => {
   res.status(status).json(obj);
 }
 
+const getCategories = async (req, res) => {
+  console.log('controller.productsControllers.getCategories()');
+
+  let status = 200;
+  const obj = {
+    message: '',
+    data: []
+  };
+
+  try {
+    const categories = await productsService.getCategories();
+    obj.message = "Successfully found categories.";
+    obj.data = categories;
+  } catch (error) {
+    obj.message = error.message;
+    status = 500;
+  }
+
+  res.status(status).json(obj);
+}
+
+const getCharacters = async (req, res) => {
+  console.log('controller.productsControllers.getCharacters()');
+
+  let status = 200;
+  const obj = {
+    message: '',
+    data: []
+  };
+
+  try {
+    const characters = await productsService.getCharacters();
+    obj.message = "Successfully found characters.";
+    obj.data = characters;
+  } catch (error) {
+    obj.message = error.message;
+    status = 500;
+  }
+
+  res.status(status).json(obj);
+}
+
 module.exports = {
   getProducts,
   postProducts,
-  getProduct
+  getProduct,
+  getCategories,
+  getCharacters
 }
