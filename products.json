@@ -6,7 +6,8 @@
   "character": "Fred",
   "description": "Everyone's a chef in our eco-friendly apron, made from 55% organic cotton and 45% recycled polyester. Showcase your favorite Binaryville robot design, screen-printed in PVC- and phthalate-free inks. Apron measures 24 inches wide by 30 inches long and is easily adjustable around the neck and waist with one continuous strap. Machine wash warm, tumble dry low.",
   "image2": "https://binaryville.com/images/products/fred-0s1s-apron-gray.jpg",
-  "image3": "NULL"
+  "image3": "NULL",
+  "shortbio": "Perhaps nothing rings more true in Binaryville than this favorite phrase of the locales. Fred robot, encircled in binary digits, proudly beams out from behind these words of wisdom."
 },{
   "title": "I Compute, Therefore I Am Apron",
   "price": 24,
@@ -15,7 +16,8 @@
   "character": "Dolores",
   "description": "Everyone's a chef in our eco-friendly apron, made from 55% organic cotton and 45% recycled polyester. Showcase your favorite Binaryville robot design, screen-printed in PVC- and phthalate-free inks. Apron measures 24 inches wide by 30 inches long and is easily adjustable around the neck and waist with one continuous strap. Machine wash warm, tumble dry low. ",
   "image2": "NULL",
-  "image3": "NULL"
+  "image3": "NULL",
+  "shortbio": "Wide-eyed and grinning, Dolores robot shares the secret to a successful life, with her unique take on the famous Descartes quote. Ah, words to compute by, Dolores!"
 },{
   "title": "A Gumball for Your Thoughts Apron",
   "price": 24,
@@ -24,7 +26,8 @@
   "character": "Bubbles",
   "description": "Everyone's a chef in our eco-friendly apron, made from 55% organic cotton and 45% recycled polyester. Showcase your favorite Binaryville robot design, screen-printed in PVC- and phthalate-free inks. Apron measures 24 inches wide by 30 inches long and is easily adjustable around the neck and waist with one continuous strap. Machine wash warm, tumble dry low. ",
   "image2": "https://binaryville.com/images/products/bubbles-gumball-apron-white.jpg",
-  "image3": "NULL"
+  "image3": "NULL",
+  "shortbio": "Always the visionary, Bubbles robot extends her big heart (and generous bubble gum collection) to encourage the sharing of ideas."
 },{
   "title": "Great Microcontrollers Think Alike Apron",
   "price": 24,
@@ -33,7 +36,8 @@
   "character": "Rex",
   "description": "Everyone's a chef in our eco-friendly apron, made from 55% organic cotton and 45% recycled polyester. Showcase your favorite Binaryville robot design, screen-printed in PVC- and phthalate-free inks. Apron measures 24 inches wide by 30 inches long and is easily adjustable around the neck and waist with one continuous strap. Machine wash warm, tumble dry low. ",
   "image2": "NULL",
-  "image3": "NULL"
+  "image3": "NULL",
+  "shortbio": "After all, Rex robot would know. His chip can be traced to a long lineage of great microcontrollers and microprocessors including the PIC16C84, WD1402A, SPARC, TA2020, and the MC68000."
 },{
   "title": "It's All 0's and 1's to Me! Baseball Hat",
   "price": 29,
@@ -42,7 +46,8 @@
   "character": "Fred",
   "description": "Cheer the team on in style with our unstructured, low crown, six-panel baseball cap made of 100% organic cotton twill. Featuring our original Binaryville artwork, screen-printed with PVC- and phthalate-free inks. Complete with matching, sewn eyelets, and adjustable fabric closure. ",
   "image2": "NULL",
-  "image3": "NULL"
+  "image3": "NULL",
+  "shortbio": "Perhaps nothing rings more true in Binaryville than this favorite phrase of the locales. Fred robot, encircled in binary digits, proudly beams out from behind these words of wisdom."
 },{
   "title": "I Compute, Therefore I Am Baseball Hat",
   "price": 29,
@@ -51,7 +56,8 @@
   "character": "Dolores",
   "description": "Cheer the team on in style with our unstructured, low crown, six-panel baseball cap made of 100% organic cotton twill. Featuring our original Binaryville artwork, screen-printed with PVC- and phthalate-free inks. Complete with matching, sewn eyelets, and adjustable fabric closure. ",
   "image2": "https://binaryville.com/images/products/dolores-compute-baseballhat-gray.jpg",
-  "image3": "NULL"
+  "image3": "NULL",
+  "shortbio": "Wide-eyed and grinning, Dolores robot shares the secret to a successful life, with her unique take on the famous Descartes quote. Ah, words to compute by, Dolores!"
 },{
   "title": "A Gumball for Your Thoughts Baseball Hat",
   "price": 29,
@@ -60,7 +66,8 @@
   "character": "Bubbles",
   "description": "Cheer the team on in style with our unstructured, low crown, six-panel baseball cap made of 100% organic cotton twill. Featuring our original Binaryville artwork, screen-printed with PVC- and phthalate-free inks. Complete with matching, sewn eyelets, and adjustable fabric closure. ",
   "image2": "NULL",
-  "image3": "NULL"
+  "image3": "NULL",
+  "shortbio": "Always the visionary, Bubbles robot extends her big heart (and generous bubble gum collection) to encourage the sharing of ideas."
 },{
   "title": "Great Microcontrollers Think Alike Baseball Hat",
   "price": 29,
@@ -69,7 +76,8 @@
   "character": "Rex",
   "description": "Cheer the team on in style with our unstructured, low crown, six-panel baseball cap made of 100% organic cotton twill. Featuring our original Binaryville artwork, screen-printed with PVC- and phthalate-free inks. Complete with matching, sewn eyelets, and adjustable fabric closure. ",
   "image2": "NULL",
-  "image3": "NULL"
+  "image3": "NULL",
+  "shortbio": "After all, Rex robot would know. His chip can be traced to a long lineage of great microcontrollers and microprocessors including the PIC16C84, WD1402A, SPARC, TA2020, and the MC68000."
 },{
   "title": "It's All 0's and 1's to Me! Mug",
   "price": 16,
@@ -78,7 +86,8 @@
   "character": "Fred",
   "description": "Enjoy your morning coffee or tea in the company of your favorite Binaryville robot. Our strong ceramic mug, with its comfortable D-shaped handle, is microwave and dishwasher safe, and available in one size: 11 oz (3.2â€ diameter x 3.8â€ h). ",
   "image2": "https://binaryville.com/images/products/fred-0s1s-mug-white.jpg",
-  "image3": "NULL"
+  "image3": "NULL",
+  "shortbio": "Perhaps nothing rings more true in Binaryville than this favorite phrase of the locales. Fred robot, encircled in binary digits, proudly beams out from behind these words of wisdom."
 },{
   "title": "I Compute, Therefore I Am Mug",
   "price": 16,
@@ -87,7 +96,8 @@
   "character": "Dolores",
   "description": "Enjoy your morning coffee or tea in the company of your favorite Binaryville robot. Our strong ceramic mug, with its comfortable D-shaped handle, is microwave and dishwasher safe, and available in one size: 11 oz (3.2â€ diameter x 3.8â€ h). ",
   "image2": "NULL",
-  "image3": "NULL"
+  "image3": "NULL",
+  "shortbio": "Wide-eyed and grinning, Dolores robot shares the secret to a successful life, with her unique take on the famous Descartes quote. Ah, words to compute by, Dolores!"
 },{
   "title": "A Gumball for Your Thoughts Mug",
   "price": 16,
@@ -96,7 +106,8 @@
   "character": "Bubbles",
   "description": "Enjoy your morning coffee or tea in the company of your favorite Binaryville robot. Our strong ceramic mug, with its comfortable D-shaped handle, is microwave and dishwasher safe, and available in one size: 11 oz (3.2â€ diameter x 3.8â€ h). ",
   "image2": "NULL",
-  "image3": "NULL"
+  "image3": "NULL",
+  "shortbio": "Always the visionary, Bubbles robot extends her big heart (and generous bubble gum collection) to encourage the sharing of ideas."
 },{
   "title": "Great Microcontrollers Think Alike Mug",
   "price": 16,
@@ -105,7 +116,8 @@
   "character": "Rex",
   "description": "Enjoy your morning coffee or tea in the company of your favorite Binaryville robot. Our strong ceramic mug, with its comfortable D-shaped handle, is microwave and dishwasher safe, and available in one size: 11 oz (3.2â€ diameter x 3.8â€ h). ",
   "image2": "https://binaryville.com/images/products/rex-microcontrollers-mug-gray.jpg",
-  "image3": "NULL"
+  "image3": "NULL",
+  "shortbio": "After all, Rex robot would know. His chip can be traced to a long lineage of great microcontrollers and microprocessors including the PIC16C84, WD1402A, SPARC, TA2020, and the MC68000."
 },{
   "title": "It's All 0's and 1's to Me! T-shirt",
   "price": 26,
@@ -114,7 +126,8 @@
   "character": "Fred",
   "description": "Our t-shirts are made from ringspun, long-staple organic cotton that's ethically-sourced from member farms of local organic cotton cooperatives. Original artwork is screen-printed using PVC- and phthalate-free inks. Features crew-neck styling, shoulder-to-shoulder taping, and strong side seams. Machine wash warm, tumble dry low. ",
   "image2": "https://binaryville.com/images/products/fred-0s1s-tshirt-gray.jpg",
-  "image3": "https://binaryville.com/images/products/fred-0s1s-tshirt-white.jpg"
+  "image3": "https://binaryville.com/images/products/fred-0s1s-tshirt-white.jpg",
+  "shortbio": "Perhaps nothing rings more true in Binaryville than this favorite phrase of the locales. Fred robot, encircled in binary digits, proudly beams out from behind these words of wisdom."
 },{
   "title": "I Compute, Therefore I Am T-shirt",
   "price": 26,
@@ -123,7 +136,8 @@
   "character": "Dolores",
   "description": "Our t-shirts are made from ringspun, long-staple organic cotton that's ethically-sourced from member farms of local organic cotton cooperatives. Original artwork is screen-printed using PVC- and phthalate-free inks. Features crew-neck styling, shoulder-to-shoulder taping, and strong side seams. Machine wash warm, tumble dry low. ",
   "image2": "https://binaryville.com/images/products/dolores-compute-tshirt-gray.jpg",
-  "image3": "NULL"
+  "image3": "NULL",
+  "shortbio": "Wide-eyed and grinning, Dolores robot shares the secret to a successful life, with her unique take on the famous Descartes quote. Ah, words to compute by, Dolores!"
 },{
   "title": "A Gumball for Your Thoughts T-shirt",
   "price": 26,
@@ -132,7 +146,8 @@
   "character": "Bubbles",
   "description": "Our t-shirts are made from ringspun, long-staple organic cotton that's ethically-sourced from member farms of local organic cotton cooperatives. Original artwork is screen-printed using PVC- and phthalate-free inks. Features crew-neck styling, shoulder-to-shoulder taping, and strong side seams. Machine wash warm, tumble dry low. ",
   "image2": "NULL",
-  "image3": "NULL"
+  "image3": "NULL",
+  "shortbio": "Always the visionary, Bubbles robot extends her big heart (and generous bubble gum collection) to encourage the sharing of ideas."
 },{
   "title": "Great Microcontrollers Think Alike T-shirt",
   "price": 26,
@@ -141,5 +156,6 @@
   "character": "Rex",
   "description": "Our t-shirts are made from ringspun, long-staple organic cotton that's ethically-sourced from member farms of local organic cotton cooperatives. Original artwork is screen-printed using PVC- and phthalate-free inks. Features crew-neck styling, shoulder-to-shoulder taping, and strong side seams. Machine wash warm, tumble dry low. ",
   "image2": "NULL",
-  "image3": "NULL"
+  "image3": "NULL",
+  "shortbio": "After all, Rex robot would know. His chip can be traced to a long lineage of great microcontrollers and microprocessors including the PIC16C84, WD1402A, SPARC, TA2020, and the MC68000."
 }]
