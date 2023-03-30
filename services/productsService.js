@@ -44,11 +44,11 @@ const postProducts = async (newProduct) => {
 }
 
 const getProduct = async (id) => {
-  if (id && !await validIdStr(id)) {
+  if (id && !(await validId(id))) {
     throw new errors.ValidationError('Unknown product ID');
   }
 
-  return await productsDb.getProduct(Number.parseInt(id));
+  return await productsDb.getProduct(id);
 }
 
 const getCategories = async () => {
@@ -99,18 +99,10 @@ const validCharacters = async (characters) => {
   return true;
 }
 
-const validIdStr = async (idStr) => {
-  const id = Number.parseInt(idStr);
-
-  if (Number.isNaN(id)) {
-    return false;
-  }
-
-  return validId(id);
-}
-
 const validId = async (id) => {
-  let allIds = await productsDb.getAllIds();
+  let allIdObjects = await productsDb.getAllIds();
+
+  let allIds = allIdObjects.map((idObj) => idObj.toString());
 
   if (!allIds.includes(id)) {
     return false;
@@ -135,6 +127,5 @@ module.exports = {
   getCharacters,
   validCategories,
   validCharacters,
-  validIdStr,
   validId
 }

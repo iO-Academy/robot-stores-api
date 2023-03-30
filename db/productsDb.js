@@ -1,4 +1,5 @@
 const dbService = require('../services/dbService');
+const {ObjectId} = require("mongodb");
 
 let productsCollection = null;
 
@@ -55,7 +56,7 @@ const postProducts = async (newProduct) => {
  * @returns {Promise<{}>} The product.
  */
 const getProduct = async (id) => {
-  let query = { id: id };
+  let query = { _id: new ObjectId(id) };
 
   try {
     return await productsCollection.findOne(query);
@@ -82,7 +83,7 @@ const getAllCharacters = async () => {
 
 const getAllIds = async () => {
   try {
-    return await productsCollection.distinct('id');
+    return await productsCollection.distinct('_id');
   } catch (e) {
     throw new Error('Unexpected error');
   }
