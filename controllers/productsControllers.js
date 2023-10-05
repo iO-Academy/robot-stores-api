@@ -2,7 +2,7 @@ const productsService = require('../services/productsService');
 const errors = require('../utils/errors');
 const { stringValuesToArray } = require('../utils/miscUtils');
 
-const getProducts = async (req, res) => {
+const getProducts = async (req, res, next) => {
   const categories = stringValuesToArray(req.query.categories);
   const characters = stringValuesToArray(req.query.characters);
 
@@ -26,9 +26,10 @@ const getProducts = async (req, res) => {
   }
 
   res.status(status).json(obj);
+  next()
 }
 
-const postProducts = async (req, res) => {
+const postProducts = async (req, res, next) => {
   const newProduct = req.body;
 
   let status = 201;
@@ -50,9 +51,10 @@ const postProducts = async (req, res) => {
   }
 
   res.status(status).json(obj);
+  next()
 }
 
-const getProduct = async (req, res) => {
+const getProduct = async (req, res, next) => {
   const id = req.params.id;
 
   let status = 200;
@@ -75,9 +77,10 @@ const getProduct = async (req, res) => {
   }
 
   res.status(status).json(obj);
+  next()
 }
 
-const getCategories = async (req, res) => {
+const getCategories = async (req, res, next) => {
   let status = 200;
   const obj = {
     message: '',
@@ -94,9 +97,10 @@ const getCategories = async (req, res) => {
   }
 
   res.status(status).json(obj);
+  next()
 }
 
-const getCharacters = async (req, res) => {
+const getCharacters = async (req, res, next) => {
   let status = 200;
   const obj = {
     message: '',
@@ -113,6 +117,7 @@ const getCharacters = async (req, res) => {
   }
 
   res.status(status).json(obj);
+  next()
 }
 
 module.exports = {
