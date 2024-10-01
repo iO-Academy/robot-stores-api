@@ -4,7 +4,7 @@ Use the [json file](products.json) in this repo to set up the database.
 
 ## API documentation
 
-### Return all products - optionally filtered
+### Return all products
 
 * **URL**
 
@@ -20,15 +20,6 @@ Use the [json file](products.json) in this repo to set up the database.
 
   There are no required URL params
 
-  **Optional:**
-
-  `categories=[string]` - A comma seperated list of category strings  
-  `characters=[string]` - A comma seperated list of character strings  
-
-  **Example:**
-
-  `/products?categories=Aprons,Mugs&characters=Bubbles,Rex`
-
 * **Success Response:**
 
     * **Code:** 200 <br />
@@ -39,7 +30,7 @@ Use the [json file](products.json) in this repo to set up the database.
   "message": "Successfully found products.",
   "data": [
     {
-      "id": "63a06c1f39e63776d2b2809f",
+      "_id": "63a06c1f39e63776d2b2809f",
       "title": "It's All 0's and 1's to Me! Apron",
       "price": 24,
       "image": "https://binaryville.com/images/products/fred-0s1s-apron-black.jpg",
@@ -47,7 +38,7 @@ Use the [json file](products.json) in this repo to set up the database.
       "character": "Fred"
     },
     {
-      "id": "63a06c1f39e63776d2b280a0",
+      "_id": "63a06c1f39e63776d2b280a0",
       "title": "I Compute, Therefore I Am Apron",
       "price": 24,
       "image": "https://binaryville.com/images/products/dolores-compute-apron-black.jpg",
@@ -59,12 +50,6 @@ Use the [json file](products.json) in this repo to set up the database.
   ```
 
 * **Error Response:**
-
-    * **Code:** 400 BAD REQUEST <br />
-      **Content:** `{"message": "Unknown category", "data": []}`
-  
-    * **Code:** 400 BAD REQUEST <br />
-      **Content:** `{"message": "Unknown character", "data": []}`
   
     * **Code:** 500 SERVER ERROR <br />
       **Content:** `{"message": "Unexpected error", "data": []}`
@@ -103,7 +88,7 @@ Use the [json file](products.json) in this repo to set up the database.
   "message": "Successfully found product.",
   "data": 
     {
-      "id": "63a06c1f39e63776d2b2809f",
+      "_id": "63a06c1f39e63776d2b2809f",
       "title": "I Compute, Therefore I Am Baseball Hat",
       "price": 29,
       "image": "https://binaryville.com/images/products/dolores-compute-baseballhat-black.jpg",
@@ -123,6 +108,77 @@ Use the [json file](products.json) in this repo to set up the database.
 
     * **Code:** 500 SERVER ERROR <br />
       **Content:** `{"message": "Unexpected error", "data": []}`
+
+### Return all characters
+
+* **URL**
+
+  /characters
+
+* **Method:**
+
+  `GET`
+
+* **URL Params**
+
+  **Required:**
+
+  There are no required URL params
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** <br />
+
+  ```json
+  {
+  "message": "Successfully found characters.",
+  "data": [
+    "Fred","Dolores","Bubbles","Rex"
+  ]
+  }
+  ```
+
+* **Error Response:**
+
+  * **Code:** 500 SERVER ERROR <br />
+    **Content:** `{"message": "Unexpected error", "data": []}`
+
+
+### Return all categories
+
+* **URL**
+
+  /categories
+
+* **Method:**
+
+  `GET`
+
+* **URL Params**
+
+  **Required:**
+
+  There are no required URL params
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** <br />
+
+  ```json
+  {
+  "message": "Successfully found categories.",
+  "data": [
+    "Aprons","Baseball Hats","Mugs","T-shirts"
+  ]
+  }
+  ```
+
+* **Error Response:**
+
+  * **Code:** 500 SERVER ERROR <br />
+    **Content:** `{"message": "Unexpected error", "data": []}`
 
 ### Add new product - STRETCH GOAL
 
